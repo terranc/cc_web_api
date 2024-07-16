@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
     {
         defined('DECIMAL_SCALE') || define('DECIMAL_SCALE', 8);
         bcscale(DECIMAL_SCALE);
+        URL::forceScheme('https');
     }
 
     /**

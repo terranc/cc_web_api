@@ -11,7 +11,6 @@ class SettingController extends Controller
     public function index()
     {
         $settingList = Setting::all()->toArray();
-        var_dump($setting);
         $setting = [];
         foreach ($settingList as $key => $value) {
             $setting[$value['key']] = $value['value'];
