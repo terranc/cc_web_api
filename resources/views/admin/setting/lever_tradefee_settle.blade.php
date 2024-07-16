@@ -21,8 +21,8 @@
     </thead>
     <tbody id="leverTradeFeeOption">
         @isset($setting['lever_fee_options'])
+        {{var_dump($setting['lever_fee_options'])}}
             @foreach (unserialize($setting['lever_fee_options']) as $key => $options)
-            {{$options}}
                 <tr>
                     <td>
                         <div class="layui-inline">
